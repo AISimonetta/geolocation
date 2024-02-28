@@ -12,9 +12,9 @@ function App() {
     <>
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/userLocation" element={<UserLocation />} />
+        <Route path="/userlocation" element={<UserLocation />} />
         <Route path="/weather" element={<Weather />} />
-        <Route path="/toDo" element={<ToDoList />} />
+        <Route path="/todo" element={<ToDoList />} />
     </Routes>
 
     </>

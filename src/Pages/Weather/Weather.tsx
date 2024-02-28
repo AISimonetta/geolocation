@@ -1,8 +1,12 @@
 import React from 'react'
+import SideBar from '../../Layout/SideBar/SideBar'
+
 
 const Weather = () => {
   return (
-    <div>Weather</div>
+    <div>
+      <SideBar/>
+      Weather</div>
   )
 }
 

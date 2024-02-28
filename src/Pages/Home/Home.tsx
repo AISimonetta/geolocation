@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Home.scss";
-import { MapPin } from "lucide-react";
-import { CloudSun } from "lucide-react";
-import { NotebookPen } from "lucide-react";
+import { CloudSun, NotebookPen, MapPin } from "lucide-react";
+
 
 const Home = () => {
   return (
     <div className="home home__linear-gradient">
-      <Link to="userlocation" className="icon">
+      <Link to="/userlocation" className="icon">
         <button className="home__locationBtn">
           <MapPin strokeWidth={3} className="mapPin" />
           <br></br>My Location

@@ -1,8 +1,12 @@
 import React from 'react'
+import SideBar from '../../Layout/SideBar/SideBar'
+
 
 const ToDoList = () => {
   return (
-    <div>ToDoList</div>
+    <div>
+      <SideBar/>
+      ToDoList</div>
   )
 }
 
