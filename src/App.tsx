@@ -1,6 +1,9 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
+import UserLocation from './Pages/UserLocation/UserLocation';
+import Weather from './Pages/Weather/Weather';
+import ToDoList from './Pages/ToDoList/ToDoList';
 
 
 function App() {
@@ -9,6 +12,9 @@ function App() {
     <>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/userLocation" element={<UserLocation />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/toDo" element={<ToDoList />} />
     </Routes>
 
     </>

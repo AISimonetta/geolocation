@@ -1,0 +1,43 @@
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 300px;
+    margin: 50px 50px;
+    background-color: rgba(255, 255, 255, 0.363);
+    border: 10px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    button {
+        background-color: rgb(166, 164, 164);
+        border: 7px solid white;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        margin: 10px 0;
+        color: white;
+
+        &:hover {
+            background-color: rgba(27, 26, 26, 0.363);
+            border: 7px solid rgb(0, 0, 0);
+            color: black;
+
+            .homeIcon,
+            .cloudSun,
+            .noteBookPen {
+                color: black;
+            }
+    }
+
+    .homeIcon, .cloudSun, .noteBookPen{
+        color: white;
+    }
+}
+
+}

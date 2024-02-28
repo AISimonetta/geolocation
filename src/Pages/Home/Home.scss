@@ -27,17 +27,35 @@ body {
     flex-direction: column;
 
     button {
-        background-color: rgba(255, 255, 255, 0.476);
-        border: 5px solid white;
+        background-color: rgba(255, 255, 255, 0.363);
+        border: 7px solid white;
         border-radius: 8px;
-        font-size: 1em;
-        font-weight: 500;
+        font-size: 1.1em;
+        font-weight: bolder;
         cursor: pointer;
         padding: 0.6em 1.2em;
-        font-family: inherit;
-        width: 100px;
-        height: 100px;
+        font-family: Lobster;
+        width: 120px;
+        height: 120px;
         margin: 10px 0;
+        color: white;
+
+        &:hover {
+            background-color: rgba(27, 26, 26, 0.363);
+            border: 7px solid rgb(0, 0, 0);
+            color: black;
+
+            .mapPin,
+            .cloudSun,
+            .noteBookPen {
+                color: black;
+            }
+    }
+
+    .mapPin, .cloudSun, .noteBookPen{
+        color: white;
+        padding-bottom: 3px;
+    }
 
     }
 }
