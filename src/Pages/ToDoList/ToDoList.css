@@ -1,0 +1,68 @@
+.toDo__container--one {
+  width: 55vw;
+  height: auto;
+  background-color: white;
+  color: black;
+  border: 9px solid #d7c435;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: center;
+  font-family: Lobster;
+}
+.toDo__container--two {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  display: flex;
+  padding: 20px 20px;
+  align-items: center;
+  font-family: Lobster;
+}
+.toDo p {
+  display: flex;
+  align-items: center;
+  background-color: #dcd283;
+  font-family: Anton;
+  font-size: smaller;
+  letter-spacing: 2px;
+  padding-right: 10px;
+}
+.toDo .megaphone {
+  padding: 0 10px;
+  height: 20px;
+}
+.toDo__tasks {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  align-self: center;
+  width: 100%;
+}
+.toDo__taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  border: 1px solid #030303;
+  border-radius: 8px;
+  padding: 5px 5px;
+  font-family: quicksand, sans-serif;
+}
+.toDo ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding-right: 40px;
+}
+.toDo__inputCheckbox {
+  text-align: start;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.completedTask {
+  text-decoration: line-through;
+}/*# sourceMappingURL=ToDoList.css.map */

@@ -1,13 +1,17 @@
-import React from 'react'
 import './UserLocatio.scss'
 import SideBar from '../../Layout/SideBar/SideBar'
-
+import Header from '../../Layout/Header/Header'
+import LocationCard from '../../Container/LocationCard/LocationCard'
+import Footer from '../../Layout/Footer/Footer'
 
 const UserLocation = () => {
   return (
     <div>
+      <Header />
       <SideBar/>
-      UserLocation</div>
+      <LocationCard/>
+      <Footer />
+    </div>
   )
 }
 
