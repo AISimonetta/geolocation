@@ -6,7 +6,7 @@ const WeatherCard = () => {
     <div>
       <div className="weather">
         <h1 className="weather__title">
-          <SunSnow />
+          <SunSnow className="weather__icon" />
           Weather in Your Location
         </h1>
         <ul className="weather__list">
@@ -23,7 +23,7 @@ const WeatherCard = () => {
             Weather icon url:
           </li>
           <li className="weather__list--item">
-            <ArrowRightCircle className="__icon" />
+            <ArrowRightCircle className="weather__icon" />
             Wind speed in miles per hour:
           </li>
         </ul>

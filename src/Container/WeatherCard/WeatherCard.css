@@ -1,38 +1,34 @@
-.forecast {
-  width: 300px;
-  height: 300px;
-  background-color: rgba(146, 139, 136, 0.5254901961);
+.weather {
+  width: 400px;
+  height: 30vw;
+  background-color: white;
   color: black;
   border: 9px solid #d7c435;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   font-family: Lobster;
+  margin-right: 20px;
   padding: 10px;
 }
-.forecast__title {
+.weather__title {
   font-size: 2em;
 }
-.forecast ul {
+.weather ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  color: white;
   padding-right: 40px;
 }
-.forecast__list--item {
+.weather__list--item {
   display: flex;
+  margin: 10px 10px;
   align-items: center;
   font-family: anton;
-  font-size: 14px;
-  text-align: center;
   letter-spacing: 1px;
-  border-radius: 8px;
-  border: solid 1px black;
-  margin: 10px 0;
-  padding: 10px;
 }
-.forecast__icon {
+.weather__icon {
   padding-right: 10px;
-}/*# sourceMappingURL=ForescastCard.css.map */
+}/*# sourceMappingURL=WeatherCard.css.map */
