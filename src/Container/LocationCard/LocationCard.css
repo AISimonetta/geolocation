@@ -21,9 +21,12 @@
 }
 .location__list--item {
   display: flex;
-  margin: 15px 10px;
+  margin: 20px 10px;
   align-items: center;
 }
 .location__icon {
+  padding-right: 10px;
+}
+.location .mapPinned {
   padding-right: 10px;
 }/*# sourceMappingURL=LocationCard.css.map */

@@ -1,15 +1,15 @@
-.location {
-    width: 55vw;
-    height: 30vw;
-    background-color: white;
+.forecast {
+    width: 300px;
+    height: 300px;
+    background-color: #928b8886;
     color: black;
     border: 9px solid #d7c435;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     font-family: Lobster;
+    padding: 10px;
 
     &__title {
         font-size: 2em;
@@ -19,19 +19,24 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
+        color: white;
+        padding-right: 40px;
     }
 
     &__list--item {
         display: flex;
-        margin: 20px 10px;
         align-items: center;
+        font-family: anton;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 8px;
+        border: solid 1px black;
+        margin: 10px 0;
+        padding: 10px;
     }
 
-    &__icon {
+    &__icon{
         padding-right: 10px;
     }
 
-    .mapPinned {
-        padding-right: 10px;
-    }
 }

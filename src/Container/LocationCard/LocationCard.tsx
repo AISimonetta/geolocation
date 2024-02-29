@@ -4,7 +4,7 @@ import { MapPinned,ArrowRightCircle } from 'lucide-react';
 const LocationCard = () => {
   return (
     <div className='location'>
-        <h1 className='location__title'><MapPinned />Your Location</h1>
+        <h1 className='location__title'><MapPinned className='mapPinned'/>Your Location</h1>
         <ul className='location__list'>
             <li className='location__list--item'><ArrowRightCircle className='location__icon' />City:</li>
             <li className='location__list--item'><ArrowRightCircle className='location__icon'/>Region:</li>
