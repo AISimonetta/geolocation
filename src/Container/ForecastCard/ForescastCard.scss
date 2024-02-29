@@ -1,14 +1,16 @@
+@use "./../../Assets/Styles/variables" as *;
+
 .forecast {
     width: 300px;
     height: 300px;
-    background-color: #928b8886;
-    color: black;
-    border: 9px solid #d7c435;
+    background-color: $clr-grey;
+    color: $clr-black;
+    border: 9px solid $clr-light-yellow;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Lobster;
+    font-family: $font-title-one;
     padding: 10px;
 
     &__title {
@@ -19,19 +21,19 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        color: white;
+        color: $clr-white;
         padding-right: 40px;
     }
 
     &__list--item {
         display: flex;
         align-items: center;
-        font-family: anton;
+        font-family: $font-title-two;
         font-size: 14px;
         text-align: center;
         letter-spacing: 1px;
         border-radius: 8px;
-        border: solid 1px black;
+        border: solid 1px $clr-black;
         margin: 10px 0;
         padding: 10px;
     }

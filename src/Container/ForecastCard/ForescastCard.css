@@ -3,12 +3,12 @@
   height: 300px;
   background-color: rgba(146, 139, 136, 0.5254901961);
   color: black;
-  border: 9px solid #d7c435;
+  border: 9px solid #caba3d;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Lobster;
+  font-family: "Lobster", sans-serif;
   padding: 10px;
 }
 .forecast__title {
@@ -18,13 +18,13 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #fff;
   padding-right: 40px;
 }
 .forecast__list--item {
   display: flex;
   align-items: center;
-  font-family: anton;
+  font-family: "Anton", sans-serif;
   font-size: 14px;
   text-align: center;
   letter-spacing: 1px;

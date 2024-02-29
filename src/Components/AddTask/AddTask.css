@@ -1,0 +1,29 @@
+.addTask__input {
+  border-radius: 8px;
+  padding: 10px 10px;
+  border: 1px solid #caba3d;
+  font-family: "Quicksand", sans-serif;
+  margin: 0 10px;
+}
+.addTask__input:hover {
+  background-color: rgba(27, 26, 26, 0.363);
+  color: #fff;
+  cursor: pointer;
+}
+
+.addTask__btn {
+  border-radius: 8px;
+  background-color: #caba3d;
+  border: none;
+  width: 30px;
+  padding: 10px 10px;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  margin: 0 10px;
+}
+.addTask__btn:hover {
+  background-color: rgba(27, 26, 26, 0.363);
+  color: black;
+  cursor: pointer;
+}/*# sourceMappingURL=AddTask.css.map */

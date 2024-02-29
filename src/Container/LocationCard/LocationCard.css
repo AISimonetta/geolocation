@@ -1,7 +1,7 @@
 .location {
   width: 55vw;
   height: 30vw;
-  background-color: white;
+  background-color: #fff;
   color: black;
   border: 9px solid #d7c435;
   border-radius: 8px;
@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-family: Lobster;
+  font-family: "Lobster", sans-serif;
 }
 .location__title {
   font-size: 2em;

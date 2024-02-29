@@ -7,9 +7,9 @@
   top: 0;
   right: 0;
   margin-right: 30px;
-  font-family: Lobster;
+  font-family: "Lobster", sans-serif;
   letter-spacing: 2px;
   font-weight: bolder;
   font-size: larger;
-  text-shadow: 0 0 10px #ffffff, 0 0 5px rgba(215, 196, 53, 0.5450980392);
+  text-shadow: 0 0 10px #fff, 0 0 5px #d7c435;
 }/*# sourceMappingURL=Header.css.map */

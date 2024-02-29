@@ -1,0 +1,16 @@
+.resetBtn {
+  border-radius: 8px;
+  background-color: #d7c435;
+  border: none;
+  width: 80px;
+  padding: 10px 10px;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  margin: 0 10px;
+}
+.resetBtn:hover {
+  background-color: rgba(27, 26, 26, 0.363);
+  color: black;
+  cursor: pointer;
+}/*# sourceMappingURL=Reset.css.map */

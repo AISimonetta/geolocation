@@ -28,7 +28,7 @@ body {
 }
 .home button {
   background-color: rgba(255, 255, 255, 0.363);
-  border: 7px solid white;
+  border: 7px solid #fff;
   border-radius: 8px;
   font-size: 1.1em;
   font-weight: bolder;
@@ -38,11 +38,11 @@ body {
   width: 120px;
   height: 120px;
   margin: 10px 0;
-  color: white;
+  color: #fff;
 }
 .home button:hover {
   background-color: rgba(27, 26, 26, 0.363);
-  border: 7px solid rgb(0, 0, 0);
+  border: 7px solid black;
   color: black;
 }
 .home button:hover .mapPin,
@@ -51,6 +51,6 @@ body {
   color: black;
 }
 .home button .mapPin, .home button .cloudSun, .home button .noteBookPen {
-  color: white;
+  color: #fff;
   padding-bottom: 3px;
 }/*# sourceMappingURL=Home.css.map */

@@ -1,3 +1,5 @@
+@use "./../../Assets/Styles/variables" as *;
+
 .sideBar {
     position: fixed;
     top: 0;
@@ -5,8 +7,8 @@
     width: 100px;
     height: 330px;
     margin: 50px 50px;
-    background-color: rgba(255, 255, 255, 0.363);
-    border: 8px solid white;
+    background-color: $clr-white-opacity;
+    border: 8px solid $clr-white;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -14,29 +16,29 @@
     justify-content: space-evenly;
 
     button {
-        background-color: rgba(255, 255, 255, 0.363);;
-        border: 5px solid white;
+        background-color: $clr-white-opacity;
+        border: 5px solid$clr-white;
         border-radius: 8px;
         cursor: pointer;
         width: 60px;
         height: 60px;
         margin: 10px 0;
-        color: white;
+        color: $clr-white;
 
         &:hover {
-            background-color: rgba(27, 26, 26, 0.363);
-            border: 7px solid rgb(0, 0, 0);
-            color: black;
+            background-color: $clr-black-opacity;
+            border: 7px solid $clr-black;
+            color: $clr-black;
 
             .homeIcon,
             .cloudSun,
             .noteBookPen {
-                color: black;
+                color: $clr-black;
             }
     }
 
     .homeIcon, .cloudSun, .noteBookPen{
-        color: white;
+        color: $clr-white;
     }
 }
 

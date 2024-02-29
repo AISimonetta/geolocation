@@ -1,33 +1,36 @@
+@use "./../../Assets/Styles/variables" as *;
+
+// @media screen and (min-width: 768px) {
+
 .addTask__input {
     border-radius: 8px;
     padding: 10px 10px;
-    border: 1px solid #d7c435;
-    font-family: Quicksand, sans-serif;
+    border: 1px solid $clr-light-yellow;
+    font-family: $font-text;
     margin: 0 10px;
 
     &:hover {
-        background-color: rgba(27, 26, 26, 0.363);
-        color: black;
+        background-color: $clr-black-opacity;
+        color: $clr-white;
         cursor: pointer;
     }
-
 }
 
 
 .addTask__btn {
     border-radius: 8px;
-    background-color: #d7c435;
+    background-color: $clr-light-yellow;
     border: none;
     width: 30px;
     padding: 10px 10px;
-    color: white;
-    font-family: Quicksand, sans-serif;
+    color: $clr-white;
+    font-family: $font-text;
     font-weight: bolder;
     margin: 0 10px;
 
     &:hover {
-        background-color: rgba(27, 26, 26, 0.363);
-        color: black;
+        background-color: $clr-black-opacity;
+        color: $clr-black;
         cursor: pointer;
     }
 }

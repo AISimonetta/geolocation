@@ -1,3 +1,5 @@
+@use "./../../Assets/Styles/variables" as *;
+
 .header {
     width: 100vw;
     height: 55px;
@@ -7,9 +9,9 @@
     top: 0;
     right: 0;
     margin-right: 30px;
-    font-family: Lobster;
+    font-family: $font-title-one;
     letter-spacing: 2px;
     font-weight: bolder;
     font-size: larger;
-    text-shadow: 0 0 10px #ffffff, 0 0 5px #d7c4358b;
+    text-shadow: 0 0 10px $clr-white, 0 0 5px $clr-yellow;
 }

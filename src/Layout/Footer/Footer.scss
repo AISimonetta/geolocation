@@ -1,3 +1,5 @@
+@use "./../../Assets/Styles/variables" as *;
+
 .footer {
   &__container {
     width: 100vw;
@@ -18,14 +20,20 @@
   }
 
   &__button {
-    border: 1px solid white;
+    border: 1px solid $clr-white;
     border-radius: 50%;
     padding: 8px;
     margin: 20px 30px;
-    background-color: rgba(255, 255, 255, 0.363);
+    background-color: $clr-white-opacity;
+
+    &:hover {
+      background-color: $clr-black-opacity;
+      color: $clr-black;
+      cursor: pointer;
+    }
   }
 
   &__icon {
-    color: white;
+    color: $clr-white;
   }
 }
