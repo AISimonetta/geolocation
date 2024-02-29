@@ -1,0 +1,15 @@
+.header {
+    width: 100vw;
+    height: 55px;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    font-family: Lobster;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: larger;
+    text-shadow: 0 0 10px #ffffff, 0 0 5px #d7c4358b;
+}

@@ -7,6 +7,8 @@ import {
 import SideBar from "../../Layout/SideBar/SideBar";
 import AddTask from "../../Components/AddTask/AddTask";
 import ResetBtn from "../../Components/ResetBtn/ResetBtn";
+import Footer from "../../Layout/Footer/Footer";
+import Header from "../../Layout/Header/Header";
 import { Trash } from "lucide-react";
 import "./ToDoList.scss";
 
@@ -73,6 +75,7 @@ const ToDoList = () => {
 
   return (
     <div className="toDo">
+      <Header/>
       <SideBar />
       <div className="toDo__container--one">
         <h1>Today: {currentDate}, I need to ...</h1>
@@ -112,6 +115,7 @@ const ToDoList = () => {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

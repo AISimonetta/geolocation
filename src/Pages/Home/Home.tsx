@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import "./Home.scss";
 import { CloudSun, NotebookPen, MapPin } from "lucide-react";
 import Footer from "../../Layout/Footer/Footer";
+import Header from "../../Layout/Header/Header";
 
 
 const Home = () => {
   return (
     <div className="home__linear-gradient">
+      <Header/>
       <div className="home">
         <Link to="/userlocation" className="icon">
           <button className="home__locationBtn">
