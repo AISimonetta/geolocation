@@ -1,0 +1,56 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #928b88, #d7c435, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home button {
+  background-color: rgba(255, 255, 255, 0.363);
+  border: 7px solid white;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  font-family: Lobster;
+  width: 120px;
+  height: 120px;
+  margin: 10px 0;
+  color: white;
+}
+.home button:hover {
+  background-color: rgba(27, 26, 26, 0.363);
+  border: 7px solid rgb(0, 0, 0);
+  color: black;
+}
+.home button:hover .mapPin,
+.home button:hover .cloudSun,
+.home button:hover .noteBookPen {
+  color: black;
+}
+.home button .mapPin, .home button .cloudSun, .home button .noteBookPen {
+  color: white;
+  padding-bottom: 3px;
+}/*# sourceMappingURL=Home.css.map */
