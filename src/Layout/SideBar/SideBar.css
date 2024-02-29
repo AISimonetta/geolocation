@@ -1,0 +1,38 @@
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 330px;
+  margin: 50px 50px;
+  background-color: rgba(255, 255, 255, 0.363);
+  border: 8px solid white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sideBar button {
+  background-color: rgba(255, 255, 255, 0.363);
+  border: 5px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  margin: 10px 0;
+  color: white;
+}
+.sideBar button:hover {
+  background-color: rgba(27, 26, 26, 0.363);
+  border: 7px solid rgb(0, 0, 0);
+  color: black;
+}
+.sideBar button:hover .homeIcon,
+.sideBar button:hover .cloudSun,
+.sideBar button:hover .noteBookPen {
+  color: black;
+}
+.sideBar button .homeIcon, .sideBar button .cloudSun, .sideBar button .noteBookPen {
+  color: white;
+}/*# sourceMappingURL=SideBar.css.map */

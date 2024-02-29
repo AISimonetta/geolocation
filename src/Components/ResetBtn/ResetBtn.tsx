@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import './Reset.scss'
 
 type ResetBtnProps = {
     handleReset: MouseEventHandler<HTMLButtonElement>;

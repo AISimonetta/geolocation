@@ -1,4 +1,5 @@
 import { ChangeEventHandler, MouseEventHandler } from 'react';
+import './AddTask.scss'
 
 type AddTaskProps = {
     inputValue: string;
