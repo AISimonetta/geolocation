@@ -1,16 +1,18 @@
-import { useState , useEffect} from 'react'
-import SideBar from '../../Layout/SideBar/SideBar'
-import WeatherCard from '../../Container/WeatherCard/WeatherCard'
-import Footer from '../../Layout/Footer/Footer'
-import Header from '../../Layout/Header/Header'
-import ForescastCard from '../../Container/ForecastCard/ForescastCard'
-import './Weather.scss'
-import { ForecastType } from '../../Types/ForecastType'
+import { useState, useEffect } from 'react';
+import SideBar from '../../Layout/SideBar/SideBar';
+import WeatherCard from '../../Container/WeatherCard/WeatherCard';
+import Footer from '../../Layout/Footer/Footer';
+import Header from '../../Layout/Header/Header';
+import ForescastCard from '../../Container/ForecastCard/ForescastCard';
+import './Weather.scss';
+import { ForecastType } from '../../Types/ForecastType';
+import { WeatherType } from '../../Types/WeatherType';
 
 const Weather = () => {
   const [weatherForecast, setWeatherForecast] = useState<ForecastType | null>(null);
+  const [currentWeather, setCurrentWeather] = useState<WeatherType | null>(null);
 
-  const getweatherForecast = async () => {
+  const getWeatherForecast = async () => {
     try {
       const uniqueApiKey = 'f2f1a8737e2f4a47b2a110826242802';
       const forecastResponse = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${uniqueApiKey}&q=07112&days=1`);
@@ -20,116 +22,59 @@ const Weather = () => {
       setWeatherForecast({
         maxtemp_c: forecastData.forecast.forecastday[0].day.maxtemp_c,
         mintemp_c: forecastData.forecast.forecastday[0].day.mintemp_c,
-      }
-      );
-
+      });
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error fetching weather forecast:', error);
+    }
+  };
+
+  const getCurrentWeather = async () => {
+    try {
+      const uniqueApiKey = 'f2f1a8737e2f4a47b2a110826242802';
+      const currentWeatherResponse = await fetch(`http://api.weatherapi.com/v1/current.json?key=${uniqueApiKey}&q=07112`);
+      const currentWeatherData = await currentWeatherResponse.json();
+      console.log(currentWeatherData);
+
+      setCurrentWeather({
+        temp_c: currentWeatherData.current.temp_c,
+        condition: {
+          text: currentWeatherData.current.condition.text,
+          icon: currentWeatherData.current.condition.icon,
+          code: currentWeatherData.current.condition.code,
+        },
+        wind_mph: currentWeatherData.current.wind_mph,
+      });
+    } catch (error) {
+      console.error('Error fetching current weather:', error);
     }
   };
 
   useEffect(() => {
-    getweatherForecast();
+    getWeatherForecast();
+    getCurrentWeather();
   }, []);
 
   return (
     <div>
       <Header />
-      <SideBar/>
+      <SideBar />
       <div className='weather__container'>
-        <WeatherCard/>
+        {currentWeather && (
+          <WeatherCard
+            temp_c={currentWeather.temp_c}
+            condition={currentWeather.condition}
+            wind_mph={currentWeather.wind_mph}
+          />
+        )}
         {weatherForecast ? (
-        <ForescastCard maxtemp_c={weatherForecast?.maxtemp_c} mintemp_c= {weatherForecast?.mintemp_c}  />) : <h6>Loading</h6>}
+          <ForescastCard maxtemp_c={weatherForecast?.maxtemp_c} mintemp_c={weatherForecast?.mintemp_c} />
+        ) : (
+          <h6>Loading</h6>
+        )}
       </div>
-      <Footer/>
-      </div>
-  )
-}
+      <Footer />
+    </div>
+  );
+};
 
-export default Weather
-
-// console:
-// forecast
-// : 
-// forecastday
-// : 
-// Array(1)
-// 0
-// : 
-// astro
-// : 
-// {sunrise: '06:30 AM', sunset: '05:49 PM', moonrise: 'No moonrise', moonset: '09:02 AM', moon_phase: 'Waning Gibbous', …}
-// date
-// : 
-// "2024-03-01"
-// date_epoch
-// : 
-// 1709251200
-// day
-// : 
-// avghumidity
-// : 
-// 37
-// avgtemp_c
-// : 
-// 3.1
-// avgtemp_f
-// : 
-// 37.6
-// avgvis_km
-// : 
-// 10
-// avgvis_miles
-// : 
-// 6
-// condition
-// : 
-// {text: 'Sunny', icon: '//cdn.weatherapi.com/weather/64x64/day/113.png', code: 1000}
-// daily_chance_of_rain
-// : 
-// 0
-// daily_chance_of_snow
-// : 
-// 0
-// daily_will_it_rain
-// : 
-// 0
-// daily_will_it_snow
-// : 
-// 0
-// maxtemp_c
-// : 
-// 7.3
-// maxtemp_f
-// : 
-// 45.1
-// maxwind_kph
-// : 
-// 16.9
-// maxwind_mph
-// : 
-// 10.5
-// mintemp_c
-// : 
-// -0.4
-// mintemp_f
-// : 
-// 31.3
-// totalprecip_in
-// : 
-// 0
-// totalprecip_mm
-// : 
-// 0
-// totalsnow_cm
-// : 
-// 0
-// uv
-// : 
-// 4
-// [[Prototype]]
-// : 
-// Object
-// hour
-// : 
-// (24) [{…}, {…
+export default Weather;

@@ -1,30 +1,33 @@
 import "./WeatherCard.scss";
 import { SunSnow, ArrowRightCircle } from 'lucide-react';
 
-const WeatherCard = () => {
+type WeatherCardProps = {
+  temp_c: number;
+  condition: { text: string; icon: string; };
+  wind_mph: number;
+};
+
+const WeatherCard = ({ temp_c, condition, wind_mph }: WeatherCardProps) => {
   return (
     <div>
       <div className="weather">
         <h1 className="weather__title">
           <SunSnow className="weather__icon" />
-          Weather in Your Location
+          The Weather in Your Location
         </h1>
         <ul className="weather__list">
           <li className="weather__list--item">
             <ArrowRightCircle className="weather__icon" />
-            Temperature in celsius:
+            Temperature in celsius: <span>{temp_c} Celsius </span>
           </li>
           <li className="weather__list--item">
             <ArrowRightCircle className="weather__icon" />
-            Weather condition text:
+            Weather condition: <span>{condition.text}</span>
+            <img src={condition.icon} alt="weather icon" />
           </li>
           <li className="weather__list--item">
             <ArrowRightCircle className="weather__icon" />
-            Weather icon url:
-          </li>
-          <li className="weather__list--item">
-            <ArrowRightCircle className="weather__icon" />
-            Wind speed in miles per hour:
+            Wind speed in miles per hour: <span>{wind_mph}</span>
           </li>
         </ul>
       </div>
