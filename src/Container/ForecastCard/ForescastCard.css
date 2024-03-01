@@ -1,6 +1,6 @@
 .forecast {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: auto;
   background-color: rgba(146, 139, 136, 0.5254901961);
   color: black;
   border: 9px solid #caba3d;
@@ -35,4 +35,11 @@
 }
 .forecast__icon {
   padding-right: 10px;
+}
+.forecast span {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  color: rgba(27, 26, 26, 0.363);
+  text-align: center;
+  padding: 0 10px;
 }/*# sourceMappingURL=ForescastCard.css.map */

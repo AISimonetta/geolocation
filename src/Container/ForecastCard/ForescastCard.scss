@@ -1,8 +1,8 @@
 @use "./../../Assets/Styles/variables" as *;
 
 .forecast {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: auto;
     background-color: $clr-grey;
     color: $clr-black;
     border: 9px solid $clr-light-yellow;
@@ -42,4 +42,11 @@
         padding-right: 10px;
     }
 
+    span {
+        font-family: $font-title-two;
+        letter-spacing: 1px;
+        color: $clr-black-opacity;
+        text-align: center;
+        padding: 0 10px;
+    }
 }
