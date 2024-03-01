@@ -1,6 +1,6 @@
 .location {
   width: 55vw;
-  height: 30vw;
+  height: auto;
   background-color: #fff;
   color: black;
   border: 9px solid #d7c435;
@@ -21,7 +21,7 @@
 }
 .location__list--item {
   display: flex;
-  margin: 20px 10px;
+  margin: 10px 10px;
   align-items: center;
 }
 .location__icon {
@@ -29,4 +29,11 @@
 }
 .location .mapPinned {
   padding-right: 10px;
+}
+.location span {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  color: rgba(27, 26, 26, 0.363);
+  text-align: center;
+  padding: 0 10px;
 }/*# sourceMappingURL=LocationCard.css.map */

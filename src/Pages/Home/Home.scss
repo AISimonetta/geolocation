@@ -24,6 +24,9 @@ body {
     }
 }
 
+.greeting {
+    font-family: $font-text ;
+}
 .home {
     display: flex;
     flex-direction: column;
@@ -55,10 +58,9 @@ body {
             }
     }
 
-    .mapPin, .cloudSun, .noteBookPen{
-        color: $clr-white;
-        padding-bottom: 3px;
-    }
-
+        .mapPin, .cloudSun, .noteBookPen{
+            color: $clr-white;
+            padding-bottom: 3px;
+        }
     }
 }

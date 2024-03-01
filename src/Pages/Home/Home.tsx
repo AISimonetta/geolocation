@@ -6,10 +6,25 @@ import Header from "../../Layout/Header/Header";
 
 
 const Home = () => {
+
+  const greeting = () => {
+    let currentDay = new Date();
+    let currentHour = currentDay.getHours();
+
+    if (currentHour < 12) {
+      return "Good morning Sunshine!"
+    } else if (currentHour < 18) {
+      return "Good afternoon!"
+    } else if (currentHour >= 18) {
+      return "Good evening!"; 
+    }
+  }
+
   return (
     <div className="home__linear-gradient">
       <Header/>
       <div className="home">
+        <h1 className="greeting">{greeting()}</h1>
         <Link to="/userlocation" className="icon">
           <button className="home__locationBtn">
             <MapPin strokeWidth={3} className="mapPin" />
