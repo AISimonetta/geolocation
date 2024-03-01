@@ -38,7 +38,8 @@ const Weather = () => {
       <SideBar/>
       <div className='weather__container'>
         <WeatherCard/>
-        <ForescastCard maxtemp_c={weatherForecast?.maxtemp_c} mintemp_c= {weatherForecast?.mintemp_c}  />
+        {weatherForecast ? (
+        <ForescastCard maxtemp_c={weatherForecast?.maxtemp_c} mintemp_c= {weatherForecast?.mintemp_c}  />) : <h6>Loading</h6>}
       </div>
       <Footer/>
       </div>
@@ -48,7 +49,6 @@ const Weather = () => {
 export default Weather
 
 // console:
-
 // forecast
 // : 
 // forecastday

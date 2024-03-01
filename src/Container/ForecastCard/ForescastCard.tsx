@@ -13,7 +13,7 @@ const ForescastCard = ({mintemp_c, maxtemp_c }: ForescastCardProps) => {
           Forecast
         </h1>
         <ul className='forecast__list'>
-            <li className='forecast__list--item' >Maximum temperature in celsius for the day: <span>{maxtemp_c}</span></li>
+            <li className='forecast__list--item' >Maximum temperature in celsius for the day: <span >{maxtemp_c}</span></li>
             <li className='forecast__list--item'>Minimum temperature in celsius for the day: <span>{mintemp_c}</span></li>
         </ul>
     </div>
