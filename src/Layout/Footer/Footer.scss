@@ -6,7 +6,7 @@
     height: 55px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
     background: linear-gradient(
       -45deg,
       #928b8869,
@@ -17,23 +17,5 @@
     position: absolute;
     bottom: 0;
     right: 0;
-  }
-
-  &__button {
-    border: 1px solid $clr-white;
-    border-radius: 50%;
-    padding: 8px;
-    margin: 20px 30px;
-    background-color: $clr-white-opacity;
-
-    &:hover {
-      background-color: $clr-black-opacity;
-      color: $clr-black;
-      cursor: pointer;
-    }
-  }
-
-  &__icon {
-    color: $clr-white;
   }
 }

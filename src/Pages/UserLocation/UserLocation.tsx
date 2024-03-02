@@ -14,7 +14,7 @@ const [location, setlocation] = useState<LocationType | null>(null);
 const getLocation = async () => {
   try {
     const uniqueApiKey = 'f2f1a8737e2f4a47b2a110826242802';
-    const locationResponse = await fetch(`https://api.weatherapi.com/v1/current.json?key=${uniqueApiKey}&q=London`);
+    const locationResponse = await fetch(`https://api.weatherapi.com/v1/current.json?key=${uniqueApiKey}&q=location`);
     const locationData = await locationResponse.json();
 
     setlocation({
