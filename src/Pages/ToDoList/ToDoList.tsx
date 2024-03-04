@@ -78,7 +78,7 @@ const ToDoList = () => {
       <Header/>
       <SideBar />
       <div className="toDo__container--one">
-        <h1>Today: {currentDate}, I need to ...</h1>
+        <h1 >Today: {currentDate}, I need to ...</h1>
         <div className="toDo__container--two">
           <AddTask
             inputValue={inputValue}

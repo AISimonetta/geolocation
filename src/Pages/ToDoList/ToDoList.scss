@@ -66,6 +66,8 @@
         border-radius: 8px;
         padding: 5px 5px;
         font-family: $font-text;
+        font-size: 12px;
+
     }
 
     ul {
@@ -79,10 +81,14 @@
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
     }
 
+}
+.trash {
+    height: 20px;
+    width: 20px;
 }
 
 button {
@@ -99,27 +105,33 @@ button {
     .toDo {
 
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        &__container--two {
+
+        &__container--one{
+            width: 40vw;
+            height: auto;
             background-color: $clr-white;
             color: $clr-black;
+            border: 9px solid $clr-yellow;
             border-radius: 8px;
             display: flex;
-            padding: 20px 20px;
-            align-items: center;
-            justify-content: center; 
-            height: 100vh; 
+            flex-direction: column;
+            padding: 10px 20px;
             font-family: $font-title-one;
+            margin-bottom: 100px;
         }
         
         &__container--two{
-            background-color: $clr-white;
-            color: $clr-black;
-            border-radius: 8px;
+            display: unset;
+            flex-direction: unset;
+            align-items: unset;
+            width: 400px;
             display: flex;
-            padding: 20px 20px;
-            align-items: center;
-            font-family: $font-title-one;
+            align-items: unset;
+
         }
 
         p {
@@ -153,18 +165,24 @@ button {
             border-radius: 8px;
             padding: 5px 5px;
             font-family: $font-text;
+            font-size: 16px;
+
         }
 
         ul {
             list-style-type: none;
             margin: 10px 0;
             padding-right: 40px;
+
         }
 
         &__inputCheckbox {
             text-align: start;
         }
 
+        h1 {
+            font-size: 30px;
+        }
     }
 
     button {
@@ -174,6 +192,11 @@ button {
 
     .completedTask {
         text-decoration: line-through;
+    }
+
+    .trash {
+        height: 24px;
+        width: 24px;
     }
 }
 

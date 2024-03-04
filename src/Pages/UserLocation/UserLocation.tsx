@@ -1,51 +1,68 @@
-import './UserLocatio.scss'
-import { useState, useEffect } from 'react'
-import SideBar from '../../Layout/SideBar/SideBar'
-import Header from '../../Layout/Header/Header'
-import LocationCard from '../../Container/LocationCard/LocationCard'
-import Footer from '../../Layout/Footer/Footer'
-import { LocationType } from '../../Types/LocationType'
+import "./UserLocatio.scss";
+import { useState, useEffect } from "react";
+import SideBar from "../../Layout/SideBar/SideBar";
+import Header from "../../Layout/Header/Header";
+import LocationCard from "../../Container/LocationCard/LocationCard";
+import Footer from "../../Layout/Footer/Footer";
+import { LocationType } from "../../Types/LocationType";
 
 const UserLocation = () => {
+  const [location, setlocation] = useState<LocationType | null>(null);
 
-const [location, setlocation] = useState<LocationType | null>(null);
+  const success = (position: GeolocationPosition) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
 
-///it has identify user locaction and display data accordingly. change London for current location
-const getLocation = async () => {
-  try {
-    const uniqueApiKey = 'f2f1a8737e2f4a47b2a110826242802';
-    const locationResponse = await fetch(`https://api.weatherapi.com/v1/current.json?key=${uniqueApiKey}&q=location`);
-    const locationData = await locationResponse.json();
+    getLocation(latitude, longitude);
+  };
 
-    setlocation({
-      name: locationData.location.name,
-      region: locationData.location.region,
-      country: locationData.location.country,
-      localtime: locationData.location.localtime,
-    });
-    console.log(locationData);
+  const error = () => {
+    console.log("Unable to retrieve your location");
+  };
 
-  } catch (error) {
-    console.error('Error fetching data:', error);
+  const getLocation = async (latitude: number, longitude: number) => {
+    try {
+      const uniqueApiKey = "f2f1a8737e2f4a47b2a110826242802";
+      const locationResponse = await fetch(
+        `https://api.weatherapi.com/v1/current.json?key=${uniqueApiKey}&q=${latitude},${longitude}`
+        );
+      const locationData = await locationResponse.json();
+      console.log("locationData :", locationData);
+
+      setlocation({
+        name: locationData.location.name,
+        region: locationData.location.region,
+        country: locationData.location.country,
+        localtime: locationData.location.localtime,
+      });
+
+      console.log(locationData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(success, error);
+  }, []);
+
+  if (!location) {
+    return <div>Data not found</div>;
   }
-};
-
-useEffect(() => {
-  getLocation();
-}, []);
-
-if (!location) {
-  return <div>Data not found</div>;
-}
 
   return (
-    <div className='userLocation'>
+    <div className="userLocation">
       <Header />
-      <SideBar/>
-      <LocationCard name={location.name} region={location.region} country={location.country} localtime={location.localtime}/>
+      <SideBar />
+      <LocationCard
+        name={location.name}
+        region={location.region}
+        country={location.country}
+        localtime={location.localtime}
+      />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default UserLocation
+export default UserLocation;

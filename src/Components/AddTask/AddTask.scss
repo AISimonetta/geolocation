@@ -1,76 +1,73 @@
 @use "./../../Assets/Styles/variables" as *;
 
 .addTaskContainer {
-    .addTask__input {
-        border-radius: 8px;
-        padding: 10px 10px;
-        border: 1px solid $clr-light-yellow;
-        font-family: $font-text;
-        font-size: 12px;
-        width: 150px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    
-        &:hover {
-            background-color: $clr-black-opacity;
-            color: $clr-white;
-            cursor: pointer;
-        }
-    }
-    
-    .addTask__btn {
-        border-radius: 8px;
-        background-color: $clr-light-yellow;
-        border: none;
-        width: 30px;
-        padding: 10px 10px;
-        color: $clr-white;
-        font-family: $font-text;
-        font-weight: bolder;
-        font-size: 12px;
-        text-align: center;
+  .addTask__input {
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: 1px solid $clr-light-yellow;
+    font-family: $font-text;
+    font-size: 12px;
+    width: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 
-    
-        &:hover {
-            background-color: $clr-black-opacity;
-            color: $clr-black;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: $clr-black-opacity;
+      color: $clr-white;
+      cursor: pointer;
     }
+  }
+
+  .addTask__btn {
+    border-radius: 8px;
+    background-color: $clr-light-yellow;
+    border: none;
+    width: 30px;
+    padding: 10px 10px;
+    color: $clr-white;
+    font-family: $font-text;
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: center;
+
+    &:hover {
+      background-color: $clr-black-opacity;
+      color: $clr-black;
+      cursor: pointer;
+    }
+  }
 }
 
+@media screen and (min-width: 1440px) {
+  .addTask__input {
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: 1px solid $clr-light-yellow;
+    font-family: $font-text;
+    margin: 0 10px;
 
-
-@media screen and (min-width: 1440px){
-    .addTask__input {
-        border-radius: 8px;
-        padding: 10px 10px;
-        border: 1px solid $clr-light-yellow;
-        font-family: $font-text;
-        margin: 0 10px;
-
-        &:hover {
-            background-color: $clr-black-opacity;
-            color: $clr-white;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: $clr-black-opacity;
+      color: $clr-white;
+      cursor: pointer;
     }
+  }
 
-    .addTask__btn {
-        border-radius: 8px;
-        background-color: $clr-light-yellow;
-        border: none;
-        width: 30px;
-        padding: 10px 10px;
-        color: $clr-white;
-        font-family: $font-text;
-        font-weight: bolder;
-        margin: 0 10px;
+  .addTask__btn {
+    border-radius: 8px;
+    background-color: $clr-light-yellow;
+    border: none;
+    width: 30px;
+    padding: 10px 10px;
+    color: $clr-white;
+    font-family: $font-text;
+    font-weight: bolder;
+    margin: 0 10px;
 
-        &:hover {
-            background-color: $clr-black-opacity;
-            color: $clr-black;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: $clr-black-opacity;
+      color: $clr-black;
+      cursor: pointer;
     }
+  }
 }
