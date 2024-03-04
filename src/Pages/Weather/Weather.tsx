@@ -55,7 +55,7 @@ const Weather = () => {
   }, []);
 
   return (
-    <div>
+    <div className='weather__page'>
       <Header />
       <SideBar />
       <div className='weather__container'>

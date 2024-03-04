@@ -39,7 +39,7 @@ if (!location) {
 }
 
   return (
-    <div>
+    <div className='userLocation'>
       <Header />
       <SideBar/>
       <LocationCard name={location.name} region={location.region} country={location.country} localtime={location.localtime}/>

@@ -1,5 +1,10 @@
 @use "./../../Assets/Styles/variables" as *;
 
+.home__linear-gradient {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 body {
     min-height: 100vh;
     margin: 0;
@@ -26,6 +31,8 @@ body {
 
 .greeting {
     font-family: $font-text ;
+    text-align: center;
+    font-size: 28px;
 }
 .home {
     display: flex;

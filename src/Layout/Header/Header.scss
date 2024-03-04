@@ -2,16 +2,38 @@
 
 .header {
     width: 100vw;
-    height: 55px;
     display: flex;
-    justify-content: end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 30px;
+    justify-content: center;
     font-family: $font-title-one;
     letter-spacing: 2px;
     font-weight: bolder;
     font-size: larger;
     text-shadow: 0 0 10px $clr-white, 0 0 5px $clr-yellow;
+    margin-bottom: 30px;
+
+    &__title {
+        margin-bottom: 20px;
+
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header {
+        width: 100vw;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        font-family: $font-title-one;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-size: larger;
+        text-shadow: 0 0 10px $clr-white, 0 0 5px $clr-yellow;
+        margin-bottom: 30px;
+        justify-content: end;
+        margin-right: 30px;
+        position: absolute;
+
+    }
 }

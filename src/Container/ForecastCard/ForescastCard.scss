@@ -1,8 +1,7 @@
 @use "./../../Assets/Styles/variables" as *;
-
 .forecast {
-    width: 200px;
-    height: auto;
+    width: 250px;
+    height: 250px;
     background-color: $clr-grey;
     color: $clr-black;
     border: 9px solid $clr-light-yellow;
@@ -14,7 +13,9 @@
     padding: 10px;
 
     &__title {
-        font-size: 2em;
+        font-size: 18px;
+        text-align: center;
+
     }
 
     ul {
@@ -27,20 +28,19 @@
 
     &__list--item {
         display: flex;
-        flex-direction: column;
         align-items: center;
         font-family: $font-title-two;
-        font-size: 12px;
+        font-size: 8px;
         text-align: center;
         letter-spacing: 1px;
         border-radius: 8px;
         border: solid 1px $clr-black;
-        margin: 10px 0;
-        padding: 10px;
+        margin: 5px 0;
+        padding: 5px;
     }
 
     &__icon{
-        padding-right: 10px;
+        padding-right: 8px;
     }
 
     span {
@@ -52,5 +52,62 @@
         border-radius: 50px;
         border: solid 1px $clr-black;
         margin: 10px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .forecast {
+        width: 200px;
+        height: auto;
+        background-color: $clr-grey;
+        color: $clr-black;
+        border: 9px solid $clr-light-yellow;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-title-one;
+        padding: 10px;
+
+        &__title {
+            font-size: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            color: $clr-white;
+            padding-right: 40px;
+        }
+
+        &__list--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $font-title-two;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            border: solid 1px $clr-black;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        &__icon{
+            padding-right: 10px;
+        }
+
+        span {
+            font-family: $font-title-two;
+            letter-spacing: 1px;
+            color: $clr-black;
+            text-align: center;
+            padding: 10px 10px;
+            border-radius: 50px;
+            border: solid 1px $clr-black;
+            margin: 10px;
+        }
     }
 }

@@ -1,7 +1,7 @@
 @use "./../../Assets/Styles/variables" as *;
 
 .location {
-    width: 55vw;
+    width: 80vw;
     height: auto;
     background-color: $clr-white;
     color: $clr-black;
@@ -12,9 +12,10 @@
     align-items: center;
     justify-content: space-evenly;
     font-family: $font-title-one;
+    margin: 0 20px;
 
     &__title {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     ul {
@@ -25,7 +26,7 @@
 
     &__list--item {
         display: flex;
-        margin: 10px 10px;
+        margin: 5px 5px;
         align-items: center;
     }
 
@@ -39,9 +40,57 @@
 
     span {
         font-family: $font-title-two;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         color: $clr-black-opacity;
         text-align: center;
         padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .location {
+        width: 55vw;
+        height: auto;
+        background-color: $clr-white;
+        color: $clr-black;
+        border: 9px solid $clr-yellow;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: $font-title-one;
+    
+        &__title {
+            font-size: 2em;
+        }
+    
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__list--item {
+            display: flex;
+            margin: 10px 10px;
+            align-items: center;
+        }
+    
+        &__icon {
+            padding-right: 10px;
+        }
+    
+        .mapPinned {
+            padding-right: 10px;
+        }
+    
+        span {
+            font-family: $font-title-two;
+            letter-spacing: 1px;
+            color: $clr-black-opacity;
+            text-align: center;
+            padding: 0 10px;
+        }
     }
 }
