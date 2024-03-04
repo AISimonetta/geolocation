@@ -1,33 +1,35 @@
 @use "./../../Assets/Styles/variables" as *;
 .forecast {
     width: 250px;
-    height: 250px;
+    height: 120px;
     background-color: $clr-grey;
     color: $clr-black;
     border: 9px solid $clr-light-yellow;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
     font-family: $font-title-one;
     padding: 10px;
 
     &__title {
         font-size: 18px;
         text-align: center;
-
+        margin: unset;
     }
 
     ul {
         list-style-type: none;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         color: $clr-white;
-        padding-right: 40px;
+        padding: unset;
+        margin: unset;
     }
 
     &__list--item {
         display: flex;
+        flex-direction: column;
         align-items: center;
         font-family: $font-title-two;
         font-size: 8px;
@@ -37,6 +39,8 @@
         border: solid 1px $clr-black;
         margin: 5px 0;
         padding: 5px;
+        width: 100px;
+        height: 70px;
     }
 
     &__icon{
@@ -49,16 +53,17 @@
         color: $clr-black;
         text-align: center;
         padding: 10px 10px;
-        border-radius: 50px;
+        border-radius: 8px;
         border: solid 1px $clr-black;
         margin: 10px;
+
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .forecast {
         width: 200px;
-        height: auto;
+        height: 400px;
         background-color: $clr-grey;
         color: $clr-black;
         border: 9px solid $clr-light-yellow;
@@ -67,7 +72,7 @@
         flex-direction: column;
         align-items: center;
         font-family: $font-title-one;
-        padding: 10px;
+        padding: 20px;
 
         &__title {
             font-size: 2em;
@@ -78,7 +83,7 @@
             display: flex;
             flex-direction: column;
             color: $clr-white;
-            padding-right: 40px;
+            justify-content: space-between;
         }
 
         &__list--item {
@@ -93,6 +98,8 @@
             border: solid 1px $clr-black;
             margin: 10px 0;
             padding: 10px;
+            width: unset;
+            height: unset;
         }
 
         &__icon{
@@ -104,10 +111,6 @@
             letter-spacing: 1px;
             color: $clr-black;
             text-align: center;
-            padding: 10px 10px;
-            border-radius: 50px;
-            border: solid 1px $clr-black;
-            margin: 10px;
         }
     }
 }

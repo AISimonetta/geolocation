@@ -1,9 +1,14 @@
 @use "./../../Assets/Styles/variables" as *;
 
-
 .toDo {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
     &__container--one{
-        width: 40vw;
+        width: 250px;
         height: auto;
         background-color: $clr-white;
         color: $clr-black;
@@ -11,7 +16,7 @@
         border-radius: 8px;
         display: flex;
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 10px 10px;
         align-items: center;
         font-family: $font-title-one;
         margin-bottom: 100px;
@@ -22,9 +27,12 @@
         color: $clr-black;
         border-radius: 8px;
         display: flex;
-        padding: 20px 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 10px;
         align-items: center;
         font-family: $font-title-one;
+        width: 250px;
     }
 
     p {
@@ -70,6 +78,11 @@
         text-align: start;
     }
 
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
 }
 
 button {
@@ -81,4 +94,86 @@ button {
     text-decoration: line-through;
 }
 
+@media screen and (min-width: 1440px){
+
+    .toDo {
+
+        display: flex;
+
+        &__container--two {
+            background-color: $clr-white;
+            color: $clr-black;
+            border-radius: 8px;
+            display: flex;
+            padding: 20px 20px;
+            align-items: center;
+            justify-content: center; 
+            height: 100vh; 
+            font-family: $font-title-one;
+        }
+        
+        &__container--two{
+            background-color: $clr-white;
+            color: $clr-black;
+            border-radius: 8px;
+            display: flex;
+            padding: 20px 20px;
+            align-items: center;
+            font-family: $font-title-one;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            background-color: $clr-light-yellow;
+            font-family: $font-title-two;
+            font-size: smaller;
+            letter-spacing: 2px;
+            padding-right: 10px;
+        }
+
+        .megaphone {
+            padding: 0 10px;
+            height: 20px;
+        }
+
+        &__tasks {
+            border-radius: 8px;
+            margin-bottom: 20px;
+            align-self:center;
+            width: 100%;
+        }
+
+        &__taskItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            border: 1px solid $clr-black;
+            border-radius: 8px;
+            padding: 5px 5px;
+            font-family: $font-text;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px 0;
+            padding-right: 40px;
+        }
+
+        &__inputCheckbox {
+            text-align: start;
+        }
+
+    }
+
+    button {
+        background-color: $clr-white;
+        border: none;
+    }
+
+    .completedTask {
+        text-decoration: line-through;
+    }
+}
 

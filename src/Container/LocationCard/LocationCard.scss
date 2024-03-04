@@ -1,7 +1,7 @@
 @use "./../../Assets/Styles/variables" as *;
 
 .location {
-    width: 80vw;
+    width: 100%;
     height: auto;
     background-color: $clr-white;
     color: $clr-black;
@@ -47,7 +47,7 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .location {
         width: 55vw;
         height: auto;

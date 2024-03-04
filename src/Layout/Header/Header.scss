@@ -10,6 +10,7 @@
     font-size: larger;
     text-shadow: 0 0 10px $clr-white, 0 0 5px $clr-yellow;
     margin-bottom: 30px;
+    color: $clr-light-yellow;
 
     &__title {
         margin-bottom: 20px;
@@ -17,7 +18,7 @@
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .header {
         width: 100vw;
         height: 55px;

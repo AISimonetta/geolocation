@@ -33,6 +33,7 @@ body {
     font-family: $font-text ;
     text-align: center;
     font-size: 28px;
+    color: $clr-white;
 }
 .home {
     display: flex;
@@ -69,5 +70,15 @@ body {
             color: $clr-white;
             padding-bottom: 3px;
         }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
     }
 }

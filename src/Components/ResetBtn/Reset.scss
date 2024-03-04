@@ -9,7 +9,9 @@
     color: $clr-white;
     font-family: $font-text;
     font-weight: bolder;
-    margin: 0 10px;
+    font-size: 12px;
+
+
 
     &:hover {
         background-color: $clr-black-opacity;
@@ -17,4 +19,22 @@
         cursor: pointer;
     }
 }
-
+@media screen and (min-width: 1440px){
+    .resetBtn {
+        border-radius: 8px;
+        background-color: $clr-yellow;
+        border: none;
+        width: 80px;
+        padding: 10px 10px;
+        color: $clr-white;
+        font-family: $font-text;
+        font-weight: bolder;
+        margin: 0 10px;
+    
+        &:hover {
+            background-color: $clr-black-opacity;
+            color: $clr-black;
+            cursor: pointer;
+        }
+    }
+}
