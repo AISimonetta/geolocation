@@ -47,7 +47,7 @@ const UserLocation = () => {
   }, []);
 
   if (!location) {
-    return <div>Data not found</div>;
+    return <div>Please wait...</div>;
   }
 
   return (
